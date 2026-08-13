@@ -10,22 +10,41 @@
 <meta property="og:image" content="assets/unilions-logo.svg">
 <link rel="icon" href="assets/unilions-logo.svg" type="image/svg+xml">
 
+<!-- Social and canonical -->
+<link rel="canonical" href="https://ffffff0316-glitch.github.io/wangbaseball/">
+<meta property="og:url" content="https://ffffff0316-glitch.github.io/wangbaseball/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="我喵本命對決 🧡">
+<meta name="twitter:description" content="不看照片，只憑名字與你對球員的真實偏愛，選出你的 UniLions 心動 TOP 3。">
+<meta name="twitter:image" content="assets/unilions-logo.svg">
+
 <style>
 :root{--orange:#f58220;--deep:#2f1d12;--cream:#fff7ec;--paper:#fffdf8;--muted:#8b6a52;--line:#e9c8aa}
-*{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#3b2417 0,#1b110b 100%);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","PingFang TC",Arial,sans-serif;color:var(--deep);min-height:100vh}
-.wrap{max-width:760px;margin:0 auto;padding:18px 12px 40px} .paper{display:none;background:var(--paper);border:1px solid #efd7c2;border-radius:22px;box-shadow:0 14px 42px rgba(0,0,0,.22);overflow:hidden} .paper.active{display:block}
-.hero{padding:34px 24px;background:var(--orange);color:#fff;position:relative} .hero:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-12deg,transparent 0 20px,rgba(255,255,255,.055) 20px 22px);pointer-events:none}
-.kicker{font-size:13px;letter-spacing:.16em;font-weight:900;opacity:.88} h1{font-size:34px;line-height:1.15;margin:10px 0 8px;position:relative;z-index:1} .hero p{margin:0;font-size:15px;position:relative;z-index:1} .intro-body{padding:24px} .rule{background:var(--cream);border:1px dashed var(--line);border-radius:16px;padding:16px;line-height:1.8;margin-bottom:18px}
-.btn{border:0;border-radius:14px;padding:14px 18px;font-size:16px;font-weight:900;cursor:pointer} .primary{width:100%;background:var(--orange);color:#fff;box-shadow:0 6px 0 #bc5815} .ghost{background:#fff4e9;color:#7b3b12;border:1px solid #edc9aa} .primary:active{transform:translateY(2px);box-shadow:0 4px 0 #bc5815}
-.topbar{padding:18px 18px 12px;background:#fff8ef;border-bottom:1px solid #f1dcc8} .title-small{font-weight:1000;color:#a64d10;font-size:20px} .meta{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted);margin-top:7px} .track{height:9px;background:#f0dfd1;border-radius:999px;overflow:hidden;margin-top:10px} .track>div{height:100%;background:var(--orange);width:0}
-.game-body{padding:18px} .vs-grid{display:grid;grid-template-columns:1fr 60px 1fr;gap:10px;align-items:stretch} .player-card{background:#fffaf4;border:2px solid #f0c49f;border-radius:18px;padding:22px 10px;min-height:285px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;cursor:pointer;box-shadow:0 8px 18px rgba(116,63,24,.08)} .player-card:hover{border-color:var(--orange);transform:translateY(-1px)}
-.no{font-family:Georgia,serif;color:var(--orange);font-size:64px;line-height:.95;font-weight:900;text-shadow:1px 1px 0 #8d3e0a} .name{color:var(--orange);font-size:34px;line-height:1.15;font-weight:1000;margin-top:16px} .pos{color:#d76718;font-size:20px;font-weight:900;margin-top:10px} .hearts{font-size:25px;margin-top:14px;letter-spacing:4px} .vs{display:flex;align-items:center;justify-content:center;color:#a44a0b;font-family:Georgia,serif;font-weight:1000;font-size:23px}
-.pick-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px} .pick{background:var(--orange);color:#fff} .tie{width:100%;margin-top:10px;background:#fff4e9;color:#7b3b12;border:1px dashed #dfad83} .actions{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:18px} .status-note{font-size:11px;color:#a48975;text-align:center}
-.result{padding:24px} .result-title{font-size:30px;margin:0;color:#9e460d;text-align:center} .result-sub{color:var(--muted);text-align:center;margin:8px 0 24px} .top3-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.podium{background:#fff7ed;border:1px solid #edc5a4;border-radius:16px;padding:18px 10px;text-align:center} .podium-rank{font-size:12px;font-weight:1000;color:#ae5315} .podium-no{font-family:Georgia,serif;font-size:45px;color:var(--orange);font-weight:900;margin:10px 0 3px} .podium-name{font-size:22px;color:#c05a13;font-weight:1000} .podium-meta{font-size:14px;color:#9a7358;margin-top:5px} .conflict{margin-top:22px;background:#3a2418;color:#fff4e7;border-radius:18px;padding:20px} .conflict-title{margin:0 0 6px;font-size:22px} .conflict-sub{font-size:13px;color:#e0c8b5}
-.mini-player{text-align:center;padding:14px 6px;background:rgba(255,255,255,.06);border-radius:14px} .mini-no{font-size:36px;color:#ff9b52;font-family:Georgia,serif;font-weight:900} .mini-name{font-size:21px;font-weight:1000;color:#ffb47c} .mini-pos{font-size:13px;color:#dcc0aa;margin-top:4px} .conflict-vs{font-family:Georgia,serif;font-weight:1000;text-align:center} .dwell{margin-top:16px;text-align:center;font-size:13px;color:#e3c7b2} .dwell strong{display:block;color:#ff9a4f;font-size:30px;margin:4px 0} .timer-note{text-align:center;color:#baa08d;font-size:11px;margin-top:8px} .result-actions{margin-top:18px}
+*{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#3b2417 0,#1b110b 100%);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","PingFang TC",Arial,sans-serif;color:va[...]
+.wrap{max-width:760px;margin:0 auto;padding:18px 12px 40px} .paper{display:none;background:var(--paper);border:1px solid #efd7c2;border-radius:22px;box-shadow:0 14px 42px rgba(0,0,0,.22);overflow:[...]
+.hero{padding:34px 24px;background:var(--orange);color:#fff;position:relative} .hero:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-12deg,transparent 0 20px,rgba([...]
+.kicker{font-size:13px;letter-spacing:.16em;font-weight:900;opacity:.88} h1{font-size:34px;line-height:1.15;margin:10px 0 8px;position:relative;z-index:1} .hero p{margin:0;font-size:15px;position:[...]
+.btn{border:0;border-radius:14px;padding:14px 18px;font-size:16px;font-weight:900;cursor:pointer} .primary{width:100%;background:var(--orange);color:#fff;box-shadow:0 6px 0 #bc5815} .ghost{backgro[...]
+.topbar{padding:18px 18px 12px;background:#fff8ef;border-bottom:1px solid #f1dcc8} .title-small{font-weight:1000;color:#a64d10;font-size:20px} .meta{display:flex;justify-content:space-between;gap:[...]
+.game-body{padding:18px} .vs-grid{display:grid;grid-template-columns:1fr 60px 1fr;gap:10px;align-items:stretch} .player-card{background:#fffaf4;border:2px solid #f0c49f;border-radius:18px;padding:[...]
+.no{font-family:Georgia,serif;color:var(--orange);font-size:64px;line-height:.95;font-weight:900;text-shadow:1px 1px 0 #8d3e0a} .name{color:var(--orange);font-size:34px;line-height:1.15;font-weigh[...]
+.pick-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px} .pick{background:var(--orange);color:#fff} .tie{width:100%;margin-top:10px;background:#fff4e9;color:#7b3b12;border:1[...]
+.result{padding:24px} .result-title{font-size:30px;margin:0;color:#9e460d;text-align:center} .result-sub{color:var(--muted);text-align:center;margin:8px 0 24px} .top3-grid{display:grid;grid-templa[...]
+.podium{background:#fff7ed;border:1px solid #edc5a4;border-radius:16px;padding:18px 10px;text-align:center} .podium-rank{font-size:12px;font-weight:1000;color:#ae5315} .podium-no{font-family:Georg[...]
+.mini-player{text-align:center;padding:14px 6px;background:rgba(255,255,255,.06);border-radius:14px} .mini-no{font-size:36px;color:#ff9b52;font-family:Georgia,serif;font-weight:900} .mini-name{fon[...]
 .brand-logo{width:120px;max-width:32vw;border-radius:18px;display:block;margin:0 0 14px auto;box-shadow:0 8px 20px rgba(0,0,0,.18)}
-@media(max-width:560px){.wrap{padding:0} .paper{border-radius:0;min-height:100vh} .hero{padding-top:38px} h1{font-size:31px} .game-body{padding:14px 10px} .vs-grid{grid-template-columns:1fr 42px 1fr;gap:5px} .player-card{min-height:270px;padding:18px 6px} .no{font-size:56px} .name{font-size:28px} .pos{font-size:18px} .top3-grid{grid-template-columns:1fr} .podium{display:grid;grid-template-columns:58px 1fr;grid-template-rows:auto auto;column-gap:10px;text-align:left;align-items:center} .podium-rank{grid-column:1/3} .podium-no{grid-row:2/4;font-size:42px;text-align:center} .podium-name{font-size:22px}}
+/* Accessibility: visible focus styles */
+.btn:focus,
+.player-card:focus,
+.ghost:focus,
+.pick:focus,
+.tie:focus {
+  outline: 3px solid rgba(255, 155, 82, 0.95);
+  outline-offset: 3px;
+  border-radius: 12px;
+}
+@media(max-width:560px){.wrap{padding:0} .paper{border-radius:0;min-height:100vh} .hero{padding-top:38px} h1{font-size:31px} .game-body{padding:14px 10px} .vs-grid{grid-template-columns:1fr 42px 1[...]
 </style>
 </head>
 <body>
@@ -39,7 +58,7 @@
       <p>不看照片，只憑名字與你對球員的真實偏愛。</p>
     </div>
     <div class="intro-body">
-      <div class="rule">每位球員初始有 ❤️❤️。<br>❤️ 選左邊：右邊扣 1 顆心<br>❤️ 選右邊：左邊扣 1 顆心<br>🤍 真的選不出來：雙方各扣 1 顆心<br><br>最後顯示 <b>TOP 3</b>，以及你整場停留最久、最天人交戰的那一組。</div>
+      <div class="rule">每位球員初始有 ❤️❤️。<br>❤️ 選左邊：右邊扣 1 顆心<br>❤️ 選右邊：左邊扣 1 顆心<br>🤍 真的選不出來：雙方各扣 1 顆心<b[...]
       <button id="startBtn" class="btn primary">開始心動對決</button>
     </div>
   </section>
@@ -52,7 +71,7 @@
         <span>剩餘 <b id="activeCount">0</b> 人</span>
         <span id="estimateText"></span>
       </div>
-      <div class="track"><div id="progressBar"></div></div>
+      <div class="track"><div id="progressBar" role="progressbar" aria-label="比賽進度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div></div>
     </div>
     <div class="game-body">
       <div class="vs-grid">
@@ -97,20 +116,55 @@
 
 <script>
 /* 保留你原本的資料與邏輯，僅略微整理（未改變邏輯） */
-const BASE_PLAYERS=[{"id":"2","no":2,"name":"林子豪","position":"三壘手"},{"id":"4","no":4,"name":"張翔","position":"捕手"},{"id":"6","no":6,"name":"李丞齡","position":"右外野手"},{"id":"8","no":8,"name":"朱迦恩","position":"左外野手"},{"id":"10","no":10,"name":"許哲晏","position":"內野手"},{"id":"13","no":13,"name":"陳鏞基","position":"三壘手"},{"id":"14","no":14,"name":"邱智呈","position":"右外野手"},{"id":"15","no":15,"name":"王翾祐","position":"二壘手"},{"id":"20","no":20,"name":"林佳緯","position":"外野手"},{"id":"24","no":24,"name":"陳傑憲","position":"中外野手"},{"id":"27","no":27,"name":"全紹凱","position":"二壘手"},{"id":"28","no":28,"name":"高塩將樹","position":"投手"},{"id":"29","no":29,"name":"鍾允華","position":"投手"},{"id":"33","no":33,"name":"鄭澔","position":"投手"},{"id":"35","no":35,"name":"潘傑楷","position":"三壘手"},{"id":"36","no":36,"name":"柯育民","position":"捕手"},{"id":"37","no":37,"name":"邱浩鈞","position":"投手"},{"id":"38","no":38,"name":"張皓崴","position":"游擊手"},{"id":"41","no":41,"name":"王鏡銘","position":"投手"},{"id":"42","no":42,"name":"獅帝芬","position":"投手"},{"id":"49","no":49,"name":"田子杰","position":"右外野手"},{"id":"50","no":50,"name":"布雷克","position":"投手"},{"id":"57","no":57,"name":"吳承諭","position":"投手"},{"id":"58","no":58,"name":"胡智為","position":"投手"},{"id":"62","no":62,"name":"李軍","position":"投手"},{"id":"64","no":64,"name":"林靖凱","position":"二壘手"},{"id":"65","no":65,"name":"陳重羽","position":"捕手"},{"id":"67","no":67,"name":"林泓弦","position":"游擊手"},{"id":"73","no":73,"name":"陳聖平","position":"游擊手"},{"id":"74","no":74,"name":"林詔恩","position":"投手"},{"id":"87","no":87,"name":"喬登","position":"投手"},{"id":"88","no":88,"name":"銳力獅","position":"投手"},{"id":"95","no":95,"name":"江承峰","position":"投手"}];
+const BASE_PLAYERS=[{"id":"2","no":2,"name":"林子豪","position":"三壘手"},{"id":"4","no":4,"name":"張翔","position":"捕手"},{"id":"6","no":6,"name":"李丞齡","position":"右外野手"[...]
 const MAX_EST=BASE_PLAYERS.length*2-1;let state=null,history=[];const el=id=>document.getElementById(id);
-function freshState(){return {players:BASE_PLAYERS.map(p=>({...p,hearts:2,wins:0,games:0,ties:0,eliminatedAt:null})),matchNo:1,pair:null,pairCounts:{},ended:false,coChampions:[],decisionTimes:[],pairElapsedMs:0,pairLastVisibleAt:null}}
-function pairKey(a,b){return [a,b].sort().join('|')} function activePlayers(){return state.players.filter(p=>p.hearts>0)} function getP(id){return state.players.find(p=>p.id===id)} function shuffle(a){return [...a].sort(()=>Math.random()-.5)}
-function choosePair(){const active=activePlayers();if(active.length<=1)return null;const minGames=Math.min(...active.map(p=>p.games));const a=shuffle(active.filter(p=>p.games<=minGames+1))[0];const candidates=active.filter(p=>p.id!==a.id);candidates.sort((x,y)=>{const cx=state.pairCounts[pairKey(a.id,x.id)]||0,cy=state.pairCounts[pairKey(a.id,y.id)]||0;if(cx!==cy)return cx-cy;if(x.games!==y.games)return x.games-y.games;return Math.random()-.5});const b=candidates[0];return Math.random()<.5?[a.id,b.id]:[b.id,a.id]}
-function save(){localStorage.setItem('lionsHeartStateV4Text',JSON.stringify(state));localStorage.setItem('lionsHeartHistoryV4Text',JSON.stringify(history.slice(-80))} function load(){try{const s=JSON.parse(localStorage.getItem('lionsHeartStateV4Text')||'null'),h=JSON.parse(localStorage.getItem('lionsHeartHistoryV4Text')||'[]');if(s&&Array.isArray(s.players)&&s.players.length===BASE_PLAYERS.length){state=s;history=h;state.decisionTimes=state.decisionTimes||[];state.pairElapsedMs=state.pairElapsedMs||0;state.pairLastVisibleAt=null;return true}}catch(e){}return false} function snapshot(){history.push(JSON.parse(JSON.stringify(state)));if(history.length>80)history.shift()}
-function hearts(n){return '❤️'.repeat(Math.max(0,n))||'🖤'} function showScreen(name){['intro','game','result'].forEach(id=>el(id).classList.toggle('active',id===name))} function fillCard(side,p){el(side+'No').textContent=p.no;el(side+'Name').textContent=p.name;el(side+'Pos').textContent=p.position;el(side+'Hearts').textContent=hearts(p.hearts)}
-function beginPairTimer(reset=true){if(!state||state.ended||!state.pair)return;if(reset)state.pairElapsedMs=0;state.pairLastVisibleAt=document.visibilityState==='visible'?Date.now():null;save()} function flushPairTimer(){if(!state||state.ended||!state.pair)return;if(state.pairLastVisibleAt!==null){state.pairElapsedMs+=Date.now()-state.pairLastVisibleAt;state.pairLastVisibleAt=null}} function currentPairElapsed(){let ms=state?.pairElapsedMs||0;if(state?.pairLastVisibleAt!==null&&document.visibilityState==='visible')ms+=Date.now()-state.pairLastVisibleAt;return Math.max(0,ms)}
-function render(){if(state.ended){renderResult();return}showScreen('game');let created=false;if(!state.pair){state.pair=choosePair();created=true}if(!state.pair){finish();return}const [l,r]=state.pair.map(getP);fillCard('left',l);fillCard('right',r);el('roundNo').textContent=state.matchNo;el('activeCount').textContent=activePlayers().length;el('estimateText').textContent=`最多約 ${MAX_EST} 場`;el('progressBar').style.width=Math.min(100,((state.matchNo-1)/MAX_EST)*100)+'%';el('undoBtn').disabled=history.length===0;if(created||state.pairLastVisibleAt===null)beginPairTimer(created);save()}
-function resolve(choice){if(state.ended||!state.pair)return;const elapsed=currentPairElapsed();flushPairTimer();snapshot();const [l,r]=state.pair.map(getP);state.decisionTimes.push({matchNo:state.matchNo,left:l.id,right:r.id,durationMs:elapsed,choice});l.games++;r.games++;if(choice==='left'){r.hearts--;l.wins++}if(choice==='right'){l.hearts--;r.wins++}if(choice==='tie'){l.hearts--;r.hearts--;l.ties++;r.ties++}const key=pairKey(l.id,r.id);state.pairCounts[key]=(state.pairCounts[key]||0)+1;[l,r].forEach(p=>{if(p.hearts<=0&&p.eliminatedAt===null){p.hearts=0;p.eliminatedAt=state.matchNo}});const active=activePlayers();if(active.length===0){state.coChampions=[l.id,r.id];finish();return}if(active.length===1){finish();return}state.matchNo++;state.pair=choosePair();state.pairElapsedMs=0;state.pairLastVisibleAt=null;render();beginPairTimer(true)}
-function finish(){flushPairTimer();state.ended=true;state.pair=null;state.pairLastVisibleAt=null;save();renderResult()} function rankingPlayers(){const active=activePlayers();let champs=[];if(active.length===1)champs=[active[0]];else if(state.coChampions.length)champs=state.coChampions.map(getP);const ids=new Set(champs.map(p=>p.id));const rest=state.players.filter(p=>!ids.has(p.id)).sort((a,b)=>(b.eliminatedAt||0)-(a.eliminatedAt||0)||b.wins-a.wins||b.games-a.games||a.no-b.no);return [...champs,...rest]} function formatDuration(ms){const s=ms/1000;if(s<60)return `${s.toFixed(1)} 秒`;const m=Math.floor(s/60),r=(s-m*60).toFixed(1);return `${m} 分 ${r} 秒`} function choiceText(c){return c==='tie'?'🤍 最後仍選不出來':c==='left'?'❤️ 最後選了左邊':'❤️ 最後選了右邊'}
-function renderResult(){showScreen('result');const rank=rankingPlayers(),top3=rank.slice(0,3);el('resultSub').textContent=`歷經 ${Math.max(1,state.matchNo)} 場，你的前三名出爐！`;el('top3Grid').innerHTML=top3.map((p,i)=>`<div class="podium"><div class="podium-rank">${['🥇 TOP 1','🥈 TOP 2','🥉 TOP 3'][i]}</div><div class="podium-no">#${p.no}</div><div class="podium-name">${p.name}</div><div class="podium-meta">${p.position}</div></div>`).join('');const longest=[...(state.decisionTimes||[])].sort((a,b)=>b.durationMs-a.durationMs)[0];if(!longest){el('conflictArea').innerHTML='<h3 class="conflict-title">🫨 天人交戰紀錄</h3><div class="conflict-sub">這次沒有足夠的停留紀錄。</div>';return}const a=getP(longest.left),b=getP(longest.right);el('conflictArea').innerHTML=`<h3 class="conflict-title">🫨 你最天人交戰的一題</h3><div class="conflict-sub">第 ${longest.matchNo} 場，你在這兩位之間停留最久</div><div class="conflict-duo"><div class="mini-player"><div class="mini-no">#${a.no}</div><div class="mini-name">${a.name}</div><div class="mini-pos">${a.position}</div></div><div class="conflict-vs">VS</div><div class="mini-player"><div class="mini-no">#${b.no}</div><div class="mini-name">${b.name}</div><div class="mini-pos">${b.position}</div></div></div><div class="dwell">頁面停留時間<strong>${formatDuration(longest.durationMs)}</strong><span>${choiceText(longest.choice)}</span></div><div class="timer-note">只計算這一題實際顯示在前景的時間；切到其他 App / 分頁不計入。</div>`}
-function startNew(){state=freshState();history=[];state.pair=choosePair();save();render();beginPairTimer(true)} function resetConfirm(){if(confirm('要清空目前進度，重新開始嗎？'))startNew()}
-el('startBtn').addEventListener('click',()=>{if(load()&&!state.ended&&state.matchNo>1){if(confirm('偵測到上次未完成的進度，要繼續嗎？')){render();beginPairTimer(false)}else startNew()}else startNew()});el('leftCard').addEventListener('click',()=>resolve('left'));el('rightCard').addEventListener('click',()=>resolve('right'));el('leftBtn').addEventListener('click',()=>resolve('left'));el('rightBtn').addEventListener('click',()=>resolve('right'));el('tieBtn').addEventListener('click',()=>resolve('tie'));el('resetBtn').addEventListener('click',resetConfirm);el('againBtn').addEventListener('click',startNew);el('undoBtn').addEventListener('click',()=>{if(!history.length)return;state=history.pop();state.pairLastVisibleAt=null;save();render();beginPairTimer(true)});document.addEventListener('visibilitychange',()=>{if(!state||state.ended||!state.pair)return;if(document.visibilityState==='hidden'){flushPairTimer();save()}else{state.pairLastVisibleAt=Date.now();save()}});window.addEventListener('pagehide',()=>{if(state&&!state.ended&&state.pair){flushPairTimer();save()}});
+function freshState(){return {players:BASE_PLAYERS.map(p=>({...p,hearts:2,wins:0,games:0,ties:0,eliminatedAt:null})),matchNo:1,pair:null,pairCounts:{},ended:false,coChampions:[],decisionTimes:[],[...]
+function pairKey(a,b){return [a,b].sort().join('|')} function activePlayers(){return state.players.filter(p=>p.hearts>0)} function getP(id){return state.players.find(p=>p.id===id)} function shuff[...]
+function choosePair(){const active=activePlayers();if(active.length<=1)return null;const minGames=Math.min(...active.map(p=>p.games));const a=shuffle(active.filter(p=>p.games<=minGames+1))[0];con[...]
+function save(){localStorage.setItem('lionsHeartStateV4Text',JSON.stringify(state));localStorage.setItem('lionsHeartHistoryV4Text',JSON.stringify(history.slice(-80))} function load(){try{const s=[...]
+function hearts(n){return '❤️'.repeat(Math.max(0,n))||'🖤'} function showScreen(name){['intro','game','result'].forEach(id=>el(id).classList.toggle('active',id===name))} function fillCard(s[...]
+function beginPairTimer(reset=true){if(!state||state.ended||!state.pair)return;if(reset)state.pairElapsedMs=0;state.pairLastVisibleAt=document.visibilityState==='visible'?Date.now():null;save()} [...]
+function render(){if(state.ended){renderResult();return}showScreen('game');let created=false;if(!state.pair){state.pair=choosePair();created=true}if(!state.pair){finish();return}const [l,r]=state[...]
+function resolve(choice){if(state.ended||!state.pair)return;const elapsed=currentPairElapsed();flushPairTimer();snapshot();const [l,r]=state.pair.map(getP);state.decisionTimes.push({matchNo:state[...]
+function finish(){flushPairTimer();state.ended=true;state.pair=null;state.pairLastVisibleAt=null;save();renderResult()} function rankingPlayers(){const active=activePlayers();let champs=[];if(act[...]
+function renderResult(){showScreen('result');const rank=rankingPlayers(),top3=rank.slice(0,3);el('resultSub').textContent=`歷經 ${Math.max(1,state.matchNo)} 場，你的前三名出爐！`;el('[...]
+function startNew(){state=freshState();history=[];state.pair=choosePair();save();render();beginPairTimer(true)} function resetConfirm(){if(confirm('要清空目前進度，重新開始嗎？'))st[...]
+el('startBtn').addEventListener('click',()=>{if(load()&&!state.ended&&state.matchNo>1){if(confirm('偵測到上次未完成的進度，要繼續嗎？')){render();beginPairTimer(false)}else start[...]
+
+// Accessibility: make role=button elements respond to Enter/Space
+['leftCard','rightCard'].forEach(id=>{
+  const node = document.getElementById(id);
+  if(node){
+    node.addEventListener('keydown', e=>{
+      if(e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar'){
+        e.preventDefault();
+        node.click();
+      }
+    });
+  }
+});
+
+// Keep progressbar aria-valuenow in sync with width (observes style changes)
+(function(){
+  const pb = document.getElementById('progressBar');
+  if(!pb) return;
+  const updateAria = ()=>{
+    const parent = pb.parentElement;
+    if(!parent) return;
+    const pw = parent.clientWidth || 1;
+    const w = pb.clientWidth || 0;
+    const pct = Math.round((w / pw) * 100);
+    pb.setAttribute('aria-valuenow', String(Math.max(0, Math.min(100, pct))));
+  };
+  // initial
+  updateAria();
+  // Observe style attribute changes
+  const mo = new MutationObserver(()=>updateAria());
+  mo.observe(pb, {attributes:true,attributeFilter:['style']} );
+  // also update on window resize
+  window.addEventListener('resize', updateAria);
+})();
+
 </script>
 </body>
 </html>
