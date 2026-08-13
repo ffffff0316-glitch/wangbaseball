@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff9b52"/>
+      <stop offset="1" stop-color="#f58220"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" rx="48" fill="#fff"/>
+  <circle cx="256" cy="200" r="120" fill="url(#g)"/>
+  <text x="256" y="340" font-family="Noto Sans TC, Arial, sans-serif" font-weight="900" font-size="72" fill="#2f1d12" text-anchor="middle">Uni</text>
+  <text x="256" y="410" font-family="Georgia, serif" font-weight="700" font-size="42" fill="#ae5315" text-anchor="middle">LIONS</text>
+  <title>UniLions logo (placeholder)</title>
+</svg>
